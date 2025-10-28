@@ -1,0 +1,12 @@
+name = "McPack"
+version = "1.0.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "d3b0e235d1de9f8630c205cb4ded8e9cbbe5bc4e357c88059d1143bc411e21a9"
+
+[versions]
+fabric = "0.17.3"
+minecraft = "1.20.1"
