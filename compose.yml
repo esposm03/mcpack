@@ -1,0 +1,24 @@
+services:
+  mc:
+    image: itzg/minecraft-server
+    tty: true
+    stdin_open: true
+    ports:
+      - "25565:25565"
+    environment:
+      EULA: "TRUE"
+      TYPE: "FABRIC"
+      VERSION: "1.20.1"
+      FABRIC_LOADER_VERSION: "0.17.3"
+      PACKWIZ_URL: "https://esposm03.github.io/mcpack/pack.toml"
+
+      ALLOW_FLIGHT: "true" # oftentimes causes issues if left at false
+      DIFFICULTY: "normal" # default difficulty is "easy"
+      SPAWN_PROTECTIO: 0 # otherwise non administrators would not be allowed to place/break blocks near the world spawn
+      WHITELIST: "" # comma-separated list of usernames
+
+      SEED: "4410508952049339476"
+      RCON_CMDS_STARTUP: "setworldspawn -1124 89 -2439"
+
+    volumes:
+      - ./data:/data
